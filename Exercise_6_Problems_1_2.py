@@ -63,6 +63,7 @@ print('Number of no-data values in column "TMIN":', tmin_nodata_count)
 
 day_count = None 
 #YOUR CODE HERE 4
+#Calculate the total number of days 
 day_count=len(data)
 #CAUTION!!! DON'T EDIT THIS PART START
 # Print out the solution:
