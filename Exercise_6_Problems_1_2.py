@@ -133,7 +133,7 @@ monthly_data = None
 
 # YOUR CODE HERE 9
 def fahr_to_celsius(temp_fahrenheit): 
- converted_temp=(temp_fahrenheit-32)/1.8
+ converted_temp=(temp_fahrenheit-32)/1.8 
  return converted_temp
 
 data['TAVG']=data['TAVG'].apply(fahr_to_celsius)
