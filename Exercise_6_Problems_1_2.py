@@ -19,6 +19,7 @@ data = None
 # YOUR CODE HERE 1
 #Reading the data file
 fp="data/1091402.txt"
+#Skip the second line and convert the value without data(-9999)to Nan.
 data=pd.read_csv(fp,delim_whitespace=True,skiprows=[1],na_values=[-9999])
 
 print(data.head())
