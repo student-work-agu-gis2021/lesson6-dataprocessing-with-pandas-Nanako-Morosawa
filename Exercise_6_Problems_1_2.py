@@ -23,7 +23,7 @@ fp="data/1091402.txt"
 data=pd.read_csv(fp,delim_whitespace=True,skiprows=[1],na_values=[-9999])
 #Check dataframe.
 print(data.head())
-
+#Check last line of data.
 print(data.tail())
 
 # ### Part 2 
