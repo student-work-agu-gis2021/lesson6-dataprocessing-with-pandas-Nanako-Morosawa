@@ -35,6 +35,7 @@ print(data.tail())
 
 tavg_nodata_count = None
 #YOUR CODE HERE 2
+#Calculates the number of no data(NaN)values in the TAVG column.
 tavg_nodata_count=data.iloc[:,6].isnull().sum()
 
 #CAUTION!!! DON'T EDIT THIS PART START
