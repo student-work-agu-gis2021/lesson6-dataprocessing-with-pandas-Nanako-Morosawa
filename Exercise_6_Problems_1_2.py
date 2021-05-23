@@ -49,7 +49,7 @@ print('Number of no-data values in column "TAVG":',tavg_nodata_count)
 
 tmin_nodata_count = None
 #YOUR CODE HERE 3
-#Calculate how many no-data (NaN) values there are for the TMIN column.
+#Calculates the number of no data (NaN) values in the TMIN column.
 tmin_nodata_count=data.iloc[:,8].isnull().sum()
 
 #CAUTION!!! DON'T EDIT THIS PART START
