@@ -21,8 +21,9 @@ data = None
 fp="data/1091402.txt"
 #Skip the second line and convert the value without data(-9999)to Nan.
 data=pd.read_csv(fp,delim_whitespace=True,skiprows=[1],na_values=[-9999])
-
+#Check dataframe.
 print(data.head())
+
 print(data.tail())
 
 # ### Part 2 
