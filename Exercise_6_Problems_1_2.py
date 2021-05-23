@@ -118,7 +118,8 @@ print('Average temperature (F) for the whole dataset:', round(avg_temp, 2))
 avg_temp_1969 = None
 
 # YOUR CODE HERE 8
-avg_temp_1969=data['TMAX'].10c[(data['DATE']>=19690501)&(data['DATE']<19690901)].mean()
+#Find the average TMAX temperature over the Summer of 1969 
+avg_temp_1969=data['TMAX'].loc[(data['DATE']>=19690501)&(data['DATE']<19690901)].mean()
 #CAUTION!!! DON'T EDIT THIS PART START
 # This test print should print a number
 print('Average temperature (F) for the Summer of 69:', round(avg_temp_1969, 2))
@@ -132,22 +133,22 @@ monthly_data = None
 
 # YOUR CODE HERE 9
 def fahr_to_celsius(temp_fahrenheit):
-converted_temp=(temp_fahrenheit-32)/1.8
-return converted_temp
+ converted_temp=(temp_fahrenheit-32)/1.8
+ return converted_temp
 
 data['TAVG']=data['TAVG'].apply(fahr_to_celsius)
-monthly_data=pdDataFrame()
+monthly_data=pd.DataFrame()
 
 data['TIME_STR']=data['DATE'].astype(str)
 data['YEAR']=data['TIME_STR'].str.slice(start=0,stop=4)
 data['MONTH']=data['TIME_STR'].str.slice(start=4,stop=6)
 grouped=data.groupby(['YEAR','MONTH'])
 
-mean=col['TAVG']
-for key,group in grouped:
+mean_col=['TAVG']
 
-mean_values=group[mean_col].mean()
-monthly_data=monthly_data.append(mean_values,ignore_index=True)
+for key,group in grouped:
+ mean_values=group[mean_col].mean()
+ monthly_data=monthly_data.append(mean_values,ignore_index=True)
 
 new_name={'TAVG':'temp_celsius'}
 monthly_data=monthly_data.rename(columns=new_name)
