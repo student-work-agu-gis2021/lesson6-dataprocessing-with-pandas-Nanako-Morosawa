@@ -132,7 +132,7 @@ print('Average temperature (F) for the Summer of 69:', round(avg_temp_1969, 2))
 monthly_data = None
 
 # YOUR CODE HERE 9
-def fahr_to_celsius(temp_fahrenheit):
+def fahr_to_celsius(temp_fahrenheit): 
  converted_temp=(temp_fahrenheit-32)/1.8
  return converted_temp
 
