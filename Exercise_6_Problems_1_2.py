@@ -138,7 +138,7 @@ def fahr_to_celsius(temp_fahrenheit):
 
 data['TAVG']=data['TAVG'].apply(fahr_to_celsius)
 monthly_data=pd.DataFrame()
-
+ 
 data['TIME_STR']=data['DATE'].astype(str)
 data['YEAR']=data['TIME_STR'].str.slice(start=0,stop=4)
 data['MONTH']=data['TIME_STR'].str.slice(start=4,stop=6)
